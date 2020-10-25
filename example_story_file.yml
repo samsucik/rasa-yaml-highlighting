@@ -1,0 +1,23 @@
+version: "2.0"
+stories:
+- story: collect travel booking info
+  steps:
+  - intent: greet                       
+  - action: utter_ask_howcanhelp
+  - intent: inform
+    user: "flying to Rome, gimme something cheap"                      
+    entities:
+    - location: "rome"
+    - price: "cheap"
+  - action: utter_on_it
+  - action: travel_form
+  - active_loop: travel_form
+  - slot_was_set:
+    - requested_slot: date
+- story: chitchat
+  steps:
+  - intent: greet
+    user: 'hi there'
+  - action: utter_ask_howcanhelp
+  - intent: chitchat/howdoing
+    user: how are ya my friend

@@ -1,0 +1,36 @@
+{
+	// http://www.sublimetext.com/docs/3/color_schemes.html
+	"variables": {
+		"text-fg": "#cccccc",
+		"story-bg": "#0b4a00",
+		"action-bg": "#293057",
+		"action-fg": "#505ead",
+		"user-bg": "#7a532a",
+		"user-fg": "#b37a3d",
+	},
+	"rules": [
+		{
+			"scope": "story.start.keyword.yaml",
+			"background": "var(story-bg)",
+			"foreground": "var(text-fg)"
+		},
+		{
+			"scope": "user-turn.start.keyword.yaml",
+			"foreground": "var(user-fg)",
+		},
+		{
+			"scope": "user-turn.value-scalar.yaml",
+			"background": "var(user-bg)",
+			"foreground": "var(text-fg)"
+		},
+		{
+			"scope": "bot-turn.action.start.keyword.yaml",
+			"foreground": "var(action-fg)",
+		},
+		{
+			"scope": "bot-turn.action.value-scalar.yaml",
+			"background": "var(action-bg)",
+			"foreground": "var(text-fg)"
+		}
+	]
+}
